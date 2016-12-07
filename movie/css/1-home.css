@@ -1,0 +1,291 @@
+body{
+	width: 100%;
+	height: 100%;
+}
+.outer{
+	width: 100%;
+	height: 100%;
+	max-width: 1366px;
+	max-height: 667px;
+	overflow: hidden;
+	position: relative;
+	margin: 0px auto;
+	
+}
+.inMiddle{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+/*提示层*/
+#promptBrowser{
+	height: 80px;
+	width: 400px;
+	padding: 50px 20px;
+	margin-left: -220px;
+	margin-top: -200px;
+	background: rgba(89,175,228,0.8);
+	font: bold 30px/40px "微软雅黑";
+	color: #09293c;
+	z-index: 1000;
+	text-align: center;
+	box-shadow: 0px 0px 80px #fff;
+	opacity: 0;
+	border-radius: 20px;
+}
+/*首页左部分*/
+#home_l,#home_con{
+	height: 667px;
+	width: 270px;
+}
+#home_con{
+	background: url(../img/home/home_l/01.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+#home_l{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+/*头部*/
+#logo{
+	margin: 0px auto;
+	height: 100px;
+	padding-top: 40px;
+	width: 200px;
+	position: relative;
+}
+#logo em{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	cursor: pointer;
+}
+#logo div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	width: 100%;
+}
+#logo div img{
+	height: 50px;
+	margin-top: 0px;
+}
+#logo p{
+	margin-top: 20px;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+}
+#logo p img{
+	height: 40px;
+	width: 160px;
+	-webkit-box-reflect: below 0px linear-gradient(transparent,transparent 26%,rgba(0,0,0,0.6));
+}
+/*导航*/
+#nav{
+	height: 270px;
+	width: 200px;
+	margin: 0px auto;
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+#nav div{
+	height: 30px;
+	width: 100px;
+	border-radius: 6px;
+}
+#nav div a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font: bold 22px/30px "Algerian";
+	color: #fff;
+	word-spacing: 4px;
+	text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 40px #9dd;
+	cursor: pointer;
+	transition: 500ms;
+	text-decoration: none;
+}
+#nav div a:hover{
+	word-spacing: 14px;
+	font: bold 26px/30px "Algerian";
+}
+/*音乐播放提示图片*/
+.musicRemind{
+	position: absolute;
+	bottom: 84px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	animation: botMove 1.2s ease-out infinite;
+}
+@-webkit-keyframes botMove{
+	0%{
+		bottom: 84px;
+		opacity: 1;
+	}
+	50%{
+		bottom: 74px;
+		opacity: 0.8;
+	}
+	100%{
+		bottom: 84px;
+		opacity: 1;
+	}
+}
+.musicRemind img{
+	height: 30px;
+	width: 30px;
+}
+/*音乐播放*/
+#music{
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+}
+#music li{
+	height: 30px;
+	width: 30px;
+	margin-right: 6px;
+	cursor: pointer;
+}
+#music li img{
+	height: 30px;
+	width: 30px;
+}
+/*点击音乐按钮大小变化*/
+.imgScale{
+	animation: imgSca 0.4s linear;
+}
+@-webkit-keyframes imgSca{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(0.8);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+/*首页右部分*/
+#home_r{
+	position: absolute;
+	left: 270px;
+	top: 0px;
+	height: 667px;
+	width: 1100px;
+	overflow: hidden;
+}
+#home_r ul{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 667px;
+	width: 4550px;
+}
+#home_r ul li{
+	float: left;
+	height: 667px;
+	width: 182px;
+	overflow: hidden;
+	position: relative;
+}
+#home_r li img{
+	vertical-align: top;
+	height: 667px;
+	width: 182px;
+	transition: 1s;
+}
+#home_r li img:hover{
+	transform: scale(1.1);
+}
+/*拖动提示*/
+.dragRemind{
+	position: absolute;
+	right: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 100px;
+	width: 200px;
+	animation: remindMove 1.4s ease-in-out infinite;
+}
+@-webkit-keyframes remindMove{
+	0%{
+		right: 40px;
+		opacity: 1;
+	}
+	100%{
+		right: 120px;
+		opacity: 0;
+	}
+}
+.dragRemind img,.dragRemind span{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+}
+.dragRemind span{
+	font: bold 22px/100px "宋体";
+	text-indent: 3em;
+	color: #fff;
+	text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 40px #9dd;
+}
+/*小卡通头像*/
+.minImgLeft,.minImgRight{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 55px;
+	width: 40px;
+	overflow: hidden;
+	transition: 0.3s;
+}
+.minImgLeft img,.minImgRight img{
+	height: 100%;
+	width: 100%;
+}
+.minImgLeft{
+	left: -40px;
+	/*left: 0px;*/
+}
+.minImgRight{
+	right: -40px;
+	/*right: 0px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
